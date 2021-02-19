@@ -1,0 +1,19 @@
+{
+    "name": "souza-frontend",
+    "version": "1.0.0",
+    "description": "Front-end da Souza.eti.br.",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rm -rf dist/*",
+        "build-src": "tsc --build tsconfig.json",
+        "build-web": "cp -rf web/* dist/",
+        "build-all": "npm run build-src && npm run build-web",
+        "rebuild": "npm run clean && npm run build-all"
+    },
+    "author": "Alan Moraes Souza",
+    "license": "MIT",
+    "homepage": "https://www.souza.eti.br/",
+    "dependencies": {
+        "typescript": "^4.1.5"
+    }
+}
