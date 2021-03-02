@@ -3,10 +3,14 @@
     "version": "1.0.0",
     "description": "Front-end da Souza.eti.br.",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/souza-eti-br/souza-frontend.git"
+    },
     "scripts": {
-        "clean": "rm -rf dist/*",
+        "clean": "del /s/q dist && rmdir /s/q dist",
         "build-src": "tsc --build tsconfig.json",
-        "build-web": "cp -rf web/* dist/",
+        "build-web": "xcopy web dist /e/h/y",
         "build-all": "npm run build-src && npm run build-web",
         "rebuild": "npm run clean && npm run build-all"
     },
