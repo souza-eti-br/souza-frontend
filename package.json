@@ -1,0 +1,14 @@
+{
+    "name": "souza-frontend",
+    "version": "0.0.1",
+    "description": "Front-end da Souza.eti.br",
+    "scripts": {
+        "build": "npx tsc",
+        "watch": "npx tsc -w"
+    },
+    "author": "Alan Moraes Souza",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    }
+}
