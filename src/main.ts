@@ -1,8 +1,0 @@
-import { helloTeste } from "./teste.js";
-
-const world = 'world';
-
-export function hello(who: string = world): void {
-    console.log(`Hello ${who}! `);
-    helloTeste(who);
-}
