@@ -30,5 +30,16 @@ module.exports = {
             "src"
         ]
     },
-    target: "web"
+    target: "web",
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendors",
+                    chunks: "all"
+                }
+            }
+        }
+    }
 };

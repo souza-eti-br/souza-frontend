@@ -1,5 +1,9 @@
+//import http from "utils/http";
+
 export class Menu {
     print(): void {
-        console.log("teste - novo");
+        //        http.get("http://localhost:8080/status", (data: any) => {
+        //            console.log(data);
+        //        });
     }
 }
