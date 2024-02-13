@@ -1,4 +1,4 @@
-export class I18n {
+export default class I18n {
     language: string = "pt";
     listeners: { (it8n: I18n): void; }[] = [];
     messages: {[key: string]: {[key: string]: string}} = {
@@ -15,7 +15,7 @@ export class I18n {
             "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)",
             "footer-label": "Developed by"
         }
-    };
+    }
     constructor() {
         if (!this.setLanguage(navigator.language)) {
             let found = false;
@@ -32,7 +32,7 @@ export class I18n {
         this.messages["pt"]["new"] = "novo";
         this.messages["es"]["new"] = "nuevo";
         this.messages["en"]["new"] = "new";
-    };
+    }
     setLanguage(language: string): boolean {
         let old = this.language;
         let changed = false;
@@ -49,16 +49,19 @@ export class I18n {
             }
         }
         if (changed && (old !== this.language)) {
-            for (let i = 0; i < this.listeners.length; i++) {
-                this.listeners[i](this);
-            }
+            this.runListeners();
         }
         return changed;
-    };
+    }
     addListener(listener: { (it8n: I18n): void; }): void {
         this.listeners.push(listener);
-    };
+    }
     getMessage(key: string): string {
         return this.messages[this.language][key];
+    }
+    runListeners(): void {
+        for (let i = 0; i < this.listeners.length; i++) {
+            this.listeners[i](this);
+        }
     }
 }

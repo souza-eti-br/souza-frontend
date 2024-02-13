@@ -1,6 +1,4 @@
-/** Usado para fazer requisição http. */
 class HTTP {
-
     get(url: string, success: Function) {
         let http = new XMLHttpRequest();
         http.open("GET", url);

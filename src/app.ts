@@ -1,16 +1,19 @@
-import {Menu} from "parts/menu";
-import {I18n} from "utils/i18n";
+import Header from "parts/header";
+import Footer from "parts/footer";
+import I18n from "utils/i18n";
 
-(new Menu()).print();
-let i18n = new I18n();
-i18n.addListener((i18n: I18n) : void => {
-    console.log("teste");
+class App {
+    i18n: I18n;
+    header: Header;
+    footer: Footer;
+    constructor() {
+        this.i18n = new I18n();
+        this.header = new Header(this.i18n);
+        this.footer = new Footer(this.i18n);
+        this.i18n.runListeners();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    new App();
 });
-i18n.addListener((i18n: I18n) : void => {
-    console.log(i18n.getMessage("welcome"));
-    console.log(i18n.getMessage("welcome-text"));
-    console.log(i18n.getMessage("footer-label"));
-    console.log(i18n.getMessage("new"));
-});
-i18n.setLanguage("es");
-i18n.setLanguage("pt");
