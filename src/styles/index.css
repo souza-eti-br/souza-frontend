@@ -14,3 +14,95 @@ a {
 a:hover {
     font-weight: 900;
 }
+
+div.header {
+    background-color: #222222;
+    height: 33px;
+    left: 0px;
+    overflow: hidden;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+div.header img.logo {
+    float: left;
+    height: 25px;
+    margin-left: 4px;
+    margin-right: 10px;
+    margin-top: 4px;
+    width: 25px;
+}
+
+div.header select.i18n {
+    background-color: #333333;
+    border: #000000 thin solid;
+    color: #DDDDDD;
+    float: right;
+    margin: 2px;
+    padding: 5px 4px;
+}
+
+a.header-link {
+    background-color: #222222;
+    color: #D58512;
+    float: left;
+    margin-top: 2px;
+    font-weight: 400;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+a.header-link:hover {
+    font-weight: 900;
+}
+
+div.footer {
+    background-color: #222222;
+    bottom: 0px;
+    color: #E8E8E8;
+    font-size: 12px;
+    height: 14px;
+    left: 0px;
+    margin: 0px;
+    overflow: hidden;
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+div.footer a {
+    color: #D58512;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+div.footer a:hover {
+    font-weight: 900;
+}
+
+div.footer-server-description {
+    float: left;
+}
+
+span.footer-server-status {
+    color: #FF3333;
+    font-weight: 900;
+}
+
+div.loading-screen {
+    background-color: #FFFFFF;
+    bottom: 0px;
+    color: #000000;
+    left: 0px;
+    opacity: 0.4;
+    padding-top: 10%;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    z-index: 10000;
+}

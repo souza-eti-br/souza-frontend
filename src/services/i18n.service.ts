@@ -3,11 +3,6 @@ import { Injectable } from "@angular/core";
 @Injectable({ providedIn: "root" })
 export class I18nService {
     language = "pt";
-    languages = [
-        { id: "en", name: "English33" },
-        { id: "es", name: "Español33" },
-        { id: "pt", name: "Português33" }
-    ];
     messages: {[key: string]: {[key: string]: string}} = {
         pt: {
             "developed.by": "Desenvolvido por",
