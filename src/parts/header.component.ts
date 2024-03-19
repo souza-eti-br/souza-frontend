@@ -11,11 +11,19 @@ export class HeaderComponent {
     onChangeLanguage(event: Event) {
         this.i18n.language = (event.target as HTMLInputElement).value;
     }
-    getRouteClass(path: string) {
-        if (this.router.url == ("/" + path)) {
-            return "header-link-active";
+    isRoute(path: string) {
+        return (this.router.url == ("/" + path));
+    }
+    isRouteStartsWith(path: string) {
+        return (this.router.url.startsWith("/" + path));
+    }
+    getLanguage() {
+        if (this.i18n.language == "en") {
+            return "English";
+        } else if (this.i18n.language == "es") {
+            return "Español";
         } else {
-            return "header-link";
+            return "Português";
         }
     }
 }

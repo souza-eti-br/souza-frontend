@@ -1,9 +1,12 @@
-html {
+/*html {
     font-family: monospace;
     font-size: 15px;
     background-color: #000000;
     color: #FFFFFF;
-}
+}*/
+
+
+/*
 
 a {
     color: #D58512;
@@ -81,35 +84,7 @@ a.header-link:hover {
     font-weight: 900;
 }
 
-div.footer {
-    background-color: #222222;
-    bottom: 0px;
-    color: #E8E8E8;
-    font-size: 12px;
-    height: 14px;
-    left: 0px;
-    margin: 0px;
-    overflow: hidden;
-    padding: 2px;
-    position: absolute;
-    right: 0px;
-    text-align: right;
-    white-space: nowrap;
-}
 
-div.footer a {
-    color: #D58512;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-div.footer a:hover {
-    font-weight: 900;
-}
-
-div.footer-server-description {
-    float: left;
-}
 
 span.footer-server-status {
     color: #FF3333;
@@ -128,4 +103,28 @@ div.loading-screen {
     text-align: center;
     top: 0px;
     z-index: 10000;
+}*/
+
+
+
+div.footer {
+    background-color: #222222;
+    color: #E8E8E8;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+div.footer a {
+    color: #D58512;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+div.footer a:hover {
+    font-weight: 900;
+}
+
+div.footer span.server-status {
+    float: left;
 }

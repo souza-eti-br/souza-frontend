@@ -1,9 +1,31 @@
-<div class="header">
-    <img class="logo" alt="Souza.eti.br" src="images/favicon.png" onclick="document.location = '';"/>
-    <a class="{{getRouteClass('')}}" href="">Home</a>
-    <select class="i18n" (change)="onChangeLanguage($event)">
-        <option value="en" selected="{{i18n.language == 'en' ? 'selected' : ''}}">English</option>
-        <option value="es" selected="{{i18n.language == 'es' ? 'selected' : ''}}">Español</option>
-        <option value="pt" selected="{{i18n.language == 'pt' ? 'selected' : ''}}">Português</option>
-    </select>
-</div>
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/#/home"><img alt="Souza.eti.br" src="images/favicon.png"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link {{isRoute('home') ? 'active' : ''}}" href="/#/home">Home</a></li>
+        <li class="nav-item"><a class="nav-link {{isRoute('teste') ? 'active' : ''}}" href="/#/teste">Teste</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {{isRouteStartsWith('apis/') ? 'active' : ''}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">APIs</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item {{isRoute('apis/api01') ? 'active' : ''}}" href="/#/apis/api01">API 01</a></li>
+            <li><a class="dropdown-item {{isRoute('apis/api02') ? 'active' : ''}}" href="/#/apis/api02">API 02</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav md-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{getLanguage()}}</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="i18n.language = 'en';">English</a></li>
+            <li><a class="dropdown-item" (click)="i18n.language = 'es';">Español</a></li>
+            <li><a class="dropdown-item" (click)="i18n.language = 'pt';">Português</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
