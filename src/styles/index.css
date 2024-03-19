@@ -4,38 +4,6 @@
     color: #FFFFFF;
 }
 
-
-/*
-
-
-div.main {
-    background-color: #000000;
-    bottom: 18px;
-    color: #E8E8E8;
-    left: 0px;
-    overflow: auto;
-    padding: 5px;
-    position: absolute;
-    right: 0px;
-    top: 43px;
-}
-
-div.loading-screen {
-    background-color: #FFFFFF;
-    bottom: 0px;
-    color: #000000;
-    left: 0px;
-    opacity: 0.4;
-    padding-top: 10%;
-    position: absolute;
-    right: 0px;
-    text-align: center;
-    top: 0px;
-    z-index: 10000;
-}*/
-
-
-
 div.main {
     background-color: #000000;
     bottom: 26px;
@@ -119,4 +87,18 @@ div.footer > a:hover {
 
 div.footer > span.server-status {
     float: left;
+}
+
+div.loading-screen {
+    background-color: #FFFFFF;
+    bottom: 0px;
+    color: #000000;
+    left: 0px;
+    opacity: 0.4;
+    padding-top: 10%;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    z-index: 10000;
 }
