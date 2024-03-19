@@ -1,5 +1,6 @@
 <div class="header">
-    <img class="logo" alt="Souza.eti.br" src="images/favicon.png"/>
+    <img class="logo" alt="Souza.eti.br" src="images/favicon.png" onclick="document.location = '';"/>
+    <a class="{{getRouteClass('')}}" href="">Home</a>
     <select class="i18n" (change)="onChangeLanguage($event)">
         <option value="en" selected="{{i18n.language == 'en' ? 'selected' : ''}}">English</option>
         <option value="es" selected="{{i18n.language == 'es' ? 'selected' : ''}}">Español</option>
