@@ -205,11 +205,10 @@ input[type=button].modal-button:hover {
 }
 
 /* Loading */
-div#loading-screen {
+div#loading-screen-main {
     background-color: #FFFFFF;
     bottom: 0px;
     color: #000000;
-    display: none;
     left: 0px;
     opacity: 0.4;
     padding-top: 10%;

@@ -1,0 +1,16 @@
+html {
+    font-family: monospace;
+    font-size: 15px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+a {
+    color: #D58512;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 900;
+}

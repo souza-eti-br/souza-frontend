@@ -3,17 +3,20 @@ export default class I18n {
     listeners: { (it8n: I18n): void; }[] = [];
     messages: {[key: string]: {[key: string]: string}} = {
         pt: {
+            "footer-label": "Desenvolvido por",
+            "loading-label": "Carregando",
             "welcome": "Bem-vindo!",
-            "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)",
-            "footer-label": "Desenvolvido por"
+            "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)"
         }, es: {
+            "footer-label": "Desarrollado por",
+            "loading-label": "Cargando",
             "welcome": "Bienvenidos!",
-            "welcome-text": "Esta página es para uso personal. A continuación puedes acceder a mi LinkedIn. :)",
-            "footer-label": "Desarrollado por"
+            "welcome-text": "Esta página es para uso personal. A continuación puedes acceder a mi LinkedIn. :)"
         }, en: {
+            "footer-label": "Developed by",
+            "loading-label": "Loading",
             "welcome": "Welcome!",
-            "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)",
-            "footer-label": "Developed by"
+            "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)"
         }
     }
     constructor() {

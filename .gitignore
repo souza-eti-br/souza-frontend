@@ -1,5 +1,4 @@
+/.angular
+/dist
 /nbproject
 /node_modules
-/web/app.bundle.js
-/web/vendors.bundle.js
-/web/vendors.bundle.js.LICENSE.txt
