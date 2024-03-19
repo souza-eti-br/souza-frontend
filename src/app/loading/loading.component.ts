@@ -8,11 +8,11 @@ import { I18nService } from "../i18n.service"
 })
 export class LoadingComponent {
     count = 0;
-    constructor(protected i18n: I18nService) {};
+    constructor(protected i18n: I18nService) {}
     show() {
         this.count = this.count + 1;
-    };
+    }
     hide() {
         this.count = this.count - 1;
-    };
+    }
 }

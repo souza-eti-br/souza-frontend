@@ -4,9 +4,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoadingComponent } from './loading/loading.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-    declarations: [ AppComponent, LoadingComponent, FooterComponent ],
+    declarations: [ AppComponent, LoadingComponent, FooterComponent, HeaderComponent ],
     imports: [ BrowserModule, AppRoutingModule ],
     providers: [],
     bootstrap: [AppComponent]
