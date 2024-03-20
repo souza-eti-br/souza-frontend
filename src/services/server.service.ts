@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class ServerService {
     online = false;
     constructor(private httpClient: HttpClient) {
-        this.httpClient.get<Status>("http://localhost:8080/status").subscribe((status: Status) => {
+        this.httpClient.get<Status>("http://localhost:9000/status").subscribe((status: Status) => {
             this.online = status.serverOnline;
         });
     }
