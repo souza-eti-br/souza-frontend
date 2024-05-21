@@ -1,38 +1,23 @@
 {
     "name": "souza-frontend",
     "version": "0.0.1",
+    "description": "Frontend da Souza.eti.br.",
+    "repository": "github:souza-eti-br/souza-frontend",
+    "keywords": [
+        "Souza.eti.br"
+    ],
     "scripts": {
-        "start": "ng serve",
-        "build": "ng build"
+        "build": "node --max-old-space-size=4096 ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+        "watch": "node server.js & node --max-old-space-size=4096 ./node_modules/webpack/bin/webpack.js --watch --config webpack.config.js"
     },
-    "private": true,
-    "dependencies": {
-        "@angular/animations": "17.3.7",
-        "@angular/common": "17.3.7",
-        "@angular/compiler": "17.3.7",
-        "@angular/core": "17.3.7",
-        "@angular/forms": "17.3.7",
-        "@angular/platform-browser": "17.3.7",
-        "@angular/platform-browser-dynamic": "17.3.7",
-        "@angular/router": "17.3.7",
-        "bootstrap": "5.3.3",
-        "bootstrap-icons": "1.11.3",
-        "ngx-bootstrap": "12.0.0",
-        "rxjs": "7.8.1",
-        "tslib": "2.6.2",
-        "zone.js": "0.14.5"
-    },
+    "author": "Alan Moraes Souza",
+    "license": "MIT",
     "devDependencies": {
-        "@angular-devkit/build-angular": "17.3.6",
-        "@angular/cli": "17.3.6",
-        "@angular/compiler-cli": "17.3.7",
-        "@types/jasmine": "5.1.4",
-        "jasmine-core": "5.1.2",
-        "karma": "6.4.3",
-        "karma-chrome-launcher": "3.2.0",
-        "karma-coverage": "2.2.1",
-        "karma-jasmine": "5.1.0",
-        "karma-jasmine-html-reporter": "2.1.0",
-        "typescript": "5.4.5"
+        "express": "4.19.2",
+        "ts-loader": "9.5.1",
+        "ts-node": "10.9.2",
+        "typescript": "5.4.5",
+        "webpack": "5.91.0",
+        "webpack-cli": "5.1.4"
     }
 }
