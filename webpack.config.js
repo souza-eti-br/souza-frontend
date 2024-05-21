@@ -22,13 +22,8 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [
-            ".ts"
-        ],
-        modules: [
-            "node_modules",
-            "src"
-        ]
+        extensions: [".ts"],
+        modules: ["node_modules", "src"]
     },
     target: "web",
     optimization: {

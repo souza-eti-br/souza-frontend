@@ -108,31 +108,31 @@ var app = {
     execution: function (date) {
         document.getElementById("now-datetime").innerHTML = app.formatDateTime(app.now);
         document.getElementById("since-datetime").innerHTML = app.formatDateTime(app.moment);
-        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] > 0 || date[4] >= 20) && (document.getElementById("info1").className == "red")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] > 0 || date[4] >= 20) && (document.getElementById("info1").className === "red")) {
             document.getElementById("info1").className = "green";
         }
-        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 2) && (document.getElementById("info2").className == "red")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 2) && (document.getElementById("info2").className === "red")) {
             document.getElementById("info2").className = "green";
         }
-        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 8) && (document.getElementById("info3").className == "red")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 8) && (document.getElementById("info3").className === "red")) {
             document.getElementById("info3").className = "green";
         }
-        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 12) && (document.getElementById("info4").className == "red")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 12) && (document.getElementById("info4").className === "red")) {
             document.getElementById("info4").className = "yellow";
         }
-        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 24) && (document.getElementById("info4").className == "yellow")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] > 0 || date[3] >= 24) && (document.getElementById("info4").className === "yellow")) {
             document.getElementById("info4").className = "green";
         }
-        if ((date[0] > 0 || date[1] > 0 || date[2] >= 2) && (document.getElementById("info5").className == "red")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] >= 2) && (document.getElementById("info5").className === "red")) {
             document.getElementById("info5").className = "green";
         }
-        if ((date[0] > 0 || date[1] > 0 || date[2] >= 21) && (document.getElementById("info6").className == "red")) {
+        if ((date[0] > 0 || date[1] > 0 || date[2] >= 21) && (document.getElementById("info6").className === "red")) {
             document.getElementById("info6").className = "green";
         }
-        if ((date[0] >= 1) && (document.getElementById("info7").className == "red")) {
+        if ((date[0] >= 1) && (document.getElementById("info7").className === "red")) {
             document.getElementById("info7").className = "green";
         }
-        if ((date[0] >= 10) && (document.getElementById("info8").className == "red")) {
+        if ((date[0] >= 10) && (document.getElementById("info8").className === "red")) {
             document.getElementById("info8").className = "green";
         }
         app.showDiffMiliSeconds(date);
