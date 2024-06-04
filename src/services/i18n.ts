@@ -1,7 +1,7 @@
-export default class I18n {
-    language: string = "pt";
-    listeners: { (it8n: I18n): void; }[] = [];
-    messages: {[key: string]: {[key: string]: string}} = {
+const I18n = {
+    language: <string> null,
+    onChange: <() => void> null,
+    messages: <{[key: string]: {[key: string]: string}}> {
         pt: {
             "welcome": "Bem-vindo!",
             "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)",
@@ -15,24 +15,22 @@ export default class I18n {
             "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)",
             "footer-label": "Developed by"
         }
-    }
-    constructor() {
-        if (!this.setLanguage(navigator.language)) {
-            let found = false;
+    },
+    setLanguageFromNavigator(): boolean {
+        let setted = this.setLanguage(navigator.language);
+        if (!setted) {
             for (let language in navigator.languages) {
-                if (this.setLanguage(language)) {
-                    found = true;
+                setted = this.setLanguage(language);
+                if (setted) {
                     break;
                 } 
             }
-            if (!found) {
-                this.language = "pt";
-            }
         }
-        this.messages["pt"]["new"] = "novo";
-        this.messages["es"]["new"] = "nuevo";
-        this.messages["en"]["new"] = "new";
-    }
+        if (!setted) {
+            setted = this.setLanguage("pt");
+        }
+        return setted;
+    },
     setLanguage(language: string): boolean {
         let old = this.language;
         let changed = false;
@@ -48,20 +46,18 @@ export default class I18n {
                 changed = true;
             }
         }
-        if (changed && (old !== this.language)) {
-            this.runListeners();
+        if (changed && (old !== this.language) && this.onChange != null) {
+            this.onChange();
         }
         return changed;
-    }
-    addListener(listener: { (it8n: I18n): void; }): void {
-        this.listeners.push(listener);
-    }
+    },
     getMessage(key: string): string {
-        return this.messages[this.language][key];
-    }
-    runListeners(): void {
-        for (let i = 0; i < this.listeners.length; i++) {
-            this.listeners[i](this);
+        if (this.language) {
+            return this.messages[this.language][key];
+        } else {
+            return "### language not setted ###";
         }
     }
 }
+
+export default I18n;

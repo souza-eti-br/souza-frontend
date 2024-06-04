@@ -1,19 +1,22 @@
 import Header from "parts/header";
 import Footer from "parts/footer";
-import I18n from "utils/i18n";
+import I18n from "services/i18n";
 
 class App {
-    i18n: I18n;
     header: Header;
     footer: Footer;
     constructor() {
-        this.i18n = new I18n();
-        this.header = new Header(this.i18n);
-        this.footer = new Footer(this.i18n);
-        this.i18n.runListeners();
+        this.header = new Header();
+        this.footer = new Footer();
+    }
+    onLanguageChange() : void {
+        this.header.onLanguageChange();
+        this.footer.onLanguageChange();
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    new App();
+    const app = new App();
+    I18n.onChange = () => app.onLanguageChange();
+    I18n.setLanguageFromNavigator();
 });
