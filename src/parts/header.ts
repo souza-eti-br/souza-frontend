@@ -1,5 +1,5 @@
 import html from "../utils/html";
-import I18n from "services/i18n";
+import i18n from "services/i18n";
 
 export default class Header {
     main: HTMLDivElement;
@@ -9,7 +9,7 @@ export default class Header {
         this.main.id = "header";
         this.main.appendChild(html.img("header-logo", "Souza.eti.br", "images/favicon.png"));
         this.select = html.select("i18n-selector", (value: string) => {
-            I18n.setLanguage(value);
+            i18n.setLanguage(value);
         });
         this.select.add(html.option("English", "en"));
         this.select.add(html.option("Español", "es"));
@@ -18,6 +18,6 @@ export default class Header {
         document.body.appendChild(this.main);
     }
     onLanguageChange() : void {
-        this.select.value = I18n.language;
+        this.select.value = i18n.language;
     }
 }

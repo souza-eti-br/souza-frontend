@@ -1,5 +1,5 @@
 import html from "../utils/html";
-import I18n from "services/i18n";
+import i18n from "services/i18n";
 
 export default class Footer {
     main: HTMLDivElement;
@@ -13,6 +13,6 @@ export default class Footer {
         document.body.appendChild(this.main);
     }
     onLanguageChange() : void {
-        this.label.innerHTML = I18n.getMessage("footer-label");
+        this.label.innerHTML = i18n.getMessage("footer-label");
     }
 }

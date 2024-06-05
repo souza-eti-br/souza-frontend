@@ -1,6 +1,6 @@
 import Header from "parts/header";
 import Footer from "parts/footer";
-import I18n from "services/i18n";
+import i18n from "services/i18n";
 
 class App {
     header: Header;
@@ -17,6 +17,6 @@ class App {
 
 document.addEventListener("DOMContentLoaded", () => {
     const app = new App();
-    I18n.onChange = () => app.onLanguageChange();
-    I18n.setLanguageFromNavigator();
+    i18n.onChange = () => app.onLanguageChange();
+    i18n.setLanguageFromNavigator();
 });

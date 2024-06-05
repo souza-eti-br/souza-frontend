@@ -1,7 +1,7 @@
-const I18n = {
-    language: <string> null,
-    onChange: <() => void> null,
-    messages: <{[key: string]: {[key: string]: string}}> {
+class I18nService {
+    language = <string> null;
+    onChange = <() => void> null;
+    messages = <{[key: string]: {[key: string]: string}}> {
         pt: {
             "welcome": "Bem-vindo!",
             "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)",
@@ -15,8 +15,8 @@ const I18n = {
             "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)",
             "footer-label": "Developed by"
         }
-    },
-    setLanguageFromNavigator(): boolean {
+    };
+    setLanguageFromNavigator = (): boolean => {
         let setted = this.setLanguage(navigator.language);
         if (!setted) {
             for (let language in navigator.languages) {
@@ -30,8 +30,8 @@ const I18n = {
             setted = this.setLanguage("pt");
         }
         return setted;
-    },
-    setLanguage(language: string): boolean {
+    };
+    setLanguage = (language: string): boolean => {
         let old = this.language;
         let changed = false;
         if (language) {
@@ -50,14 +50,23 @@ const I18n = {
             this.onChange();
         }
         return changed;
-    },
-    getMessage(key: string): string {
+    }
+    getMessage = (key: string): string => {
         if (this.language) {
-            return this.messages[this.language][key];
+            if (this.messages[this.language]) {
+                if (this.messages[this.language][key]) {
+                    return this.messages[this.language][key];
+                } else {
+                    return "### KEY " + key + " HAS NO VALUE FOR LANGUAGE " + this.language + " ###";
+                }
+            } else {
+                return "### LANGUAGE " + this.language + " IS UNDEFINED ###";
+            }
         } else {
-            return "### language not setted ###";
+            return "### LANGUAGE IS UNDEFINED ###";
         }
     }
 }
 
-export default I18n;
+const i18n = new I18nService();
+export default i18n;
