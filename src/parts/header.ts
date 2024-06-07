@@ -17,7 +17,7 @@ export default class Header {
         this.main.appendChild(this.select);
         document.body.appendChild(this.main);
     }
-    onLanguageChange() : void {
+    applyI18nMessages() : void {
         this.select.value = i18n.language;
     }
 }

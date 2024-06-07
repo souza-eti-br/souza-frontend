@@ -9,14 +9,14 @@ class App {
         this.header = new Header();
         this.footer = new Footer();
     }
-    onLanguageChange() : void {
-        this.header.onLanguageChange();
-        this.footer.onLanguageChange();
+    applyI18nMessages() : void {
+        this.header.applyI18nMessages();
+        this.footer.applyI18nMessages();
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const app = new App();
-    i18n.onChange = () => app.onLanguageChange();
+    i18n.onChange = () => app.applyI18nMessages();
     i18n.setLanguageFromNavigator();
 });

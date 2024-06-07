@@ -12,7 +12,7 @@ export default class Footer {
         this.main.appendChild(html.a("footer-link", "_blank", "mailto:alan@souza.eti.br", "Alan Moraes Souza"));
         document.body.appendChild(this.main);
     }
-    onLanguageChange() : void {
+    applyI18nMessages() : void {
         this.label.innerHTML = i18n.getMessage("footer-label");
     }
 }
