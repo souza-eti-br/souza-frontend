@@ -1,5 +1,6 @@
 import html from "../utils/html";
 import i18n from "services/i18n";
+import HeaderLogo from "components/header-logo";
 
 export default class Header {
     main: HTMLDivElement;
@@ -7,7 +8,7 @@ export default class Header {
     constructor() {
         this.main = html.div("header");
         this.main.id = "header";
-        this.main.appendChild(html.img("header-logo", "Souza.eti.br", "images/favicon.png"));
+        this.main.appendChild(new HeaderLogo());
         this.select = html.select("i18n-selector", (value: string) => {
             i18n.setLanguage(value);
         });
