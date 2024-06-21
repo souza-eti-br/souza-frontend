@@ -8,6 +8,8 @@ class App {
     constructor() {
         this.header = new Header();
         this.footer = new Footer();
+        document.body.appendChild(this.header);
+        document.body.appendChild(this.footer);
     }
     applyI18nMessages() : void {
         this.header.applyI18nMessages();

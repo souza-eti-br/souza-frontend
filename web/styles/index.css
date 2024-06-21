@@ -17,16 +17,6 @@ a:hover {
 }
 
 /* Header */
-div#header {
-    background-color: #222222;
-    height: 33px;
-    left: 0px;
-    overflow: hidden;
-    padding: 5px;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-}
 
 a.header-link {
     background-color: #222222;
@@ -77,21 +67,6 @@ div#main {
 }
 
 /* Footer */
-div.footer {
-    background-color: #222222;
-    bottom: 0px;
-    color: #E8E8E8;
-    font-size: 12px;
-    height: 14px;
-    left: 0px;
-    margin: 0px;
-    overflow: hidden;
-    padding: 2px;
-    position: absolute;
-    right: 0px;
-    text-align: right;
-    white-space: nowrap;
-}
 
 div.footer-server-description {
     float: left;
