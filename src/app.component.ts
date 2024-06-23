@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
 import { HeaderComponent } from "./parts/header/header.component";
 import { MainComponent } from "./parts/main/main.component";
 import { FooterComponent } from "./parts/footer/footer.component";
@@ -7,7 +6,7 @@ import { FooterComponent } from "./parts/footer/footer.component";
 @Component({
     selector: "ams-app",
     standalone: true,
-    imports: [HeaderComponent, MainComponent, FooterComponent],
+    imports: [ HeaderComponent, MainComponent, FooterComponent ],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.css"
 })

@@ -7,9 +7,7 @@ import { I18nService } from "../../services/i18n.service";
 })
 export class NotFoundComponent {
     page: string;
-    i18n: I18nService;
-    constructor(private i18nService: I18nService) {
+    constructor(public i18n: I18nService) {
         this.page = window.location.href;
-        this.i18n = i18nService;
     }
 }

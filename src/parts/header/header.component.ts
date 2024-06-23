@@ -6,7 +6,7 @@ import { LanguageSelectorComponent } from "../../components/language-selector/la
 @Component({
     selector: "ams-header",
     standalone: true,
-    imports: [MenubarModule, LanguageSelectorComponent],
+    imports: [ MenubarModule, LanguageSelectorComponent ],
     templateUrl: "./header.component.html",
     styleUrl: "./header.component.css"
 })
