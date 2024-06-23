@@ -1,22 +1,32 @@
-class I18nService {
-    language = <string> null;
-    onChange = <() => void> null;
-    messages = <{[key: string]: {[key: string]: string}}> {
+import { Injectable } from "@angular/core";
+
+@Injectable({
+  providedIn: "root"
+})
+export class I18nService {
+    private language = "pt";
+    private messages = <{[key: string]: {[key: string]: string}}> {
         pt: {
+            "developed.by": "Desenvolvido por",
+            "page.not.found": "Página não encontrada!",
+            "server": "Servidor",
             "welcome": "Bem-vindo!",
-            "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)",
-            "footer-label": "Desenvolvido por"
+            "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)"
         }, es: {
-            "welcome": "Bienvenidos!",
-            "welcome-text": "Esta página es para uso personal. A continuación puedes acceder a mi LinkedIn. :)",
-            "footer-label": "Desarrollado por"
+            "developed.by": "Desarrollado por",
+            "page.not.found": "¡Página no encontrada!",
+            "server": "Servidor",
+            "welcome": "¡Bienvenidos!",
+            "welcome-text": "Esta página es para uso personal. A continuación puedes acceder a mi LinkedIn. :)"
         }, en: {
+            "developed.by": "Developed by",
+            "page.not.found": "Page not found!",
+            "server": "Server",
             "welcome": "Welcome!",
-            "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)",
-            "footer-label": "Developed by"
+            "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)"
         }
     };
-    setLanguageFromNavigator = (): boolean => {
+    constructor() {
         let setted = this.setLanguage(navigator.language);
         if (!setted) {
             for (let language in navigator.languages) {
@@ -29,9 +39,11 @@ class I18nService {
         if (!setted) {
             setted = this.setLanguage("pt");
         }
-        return setted;
     };
-    setLanguage = (language: string): boolean => {
+    getLanguage(): string {
+        return this.language;
+    }
+    setLanguage(language: string): boolean {
         let old = this.language;
         let changed = false;
         if (language) {
@@ -46,12 +58,9 @@ class I18nService {
                 changed = true;
             }
         }
-        if (changed && (old !== this.language) && this.onChange != null) {
-            this.onChange();
-        }
         return changed;
     }
-    getMessage = (key: string): string => {
+    getMessage(key: string): string {
         if (this.language) {
             if (this.messages[this.language]) {
                 if (this.messages[this.language][key]) {
@@ -67,6 +76,3 @@ class I18nService {
         }
     }
 }
-
-const i18n = new I18nService();
-export default i18n;
