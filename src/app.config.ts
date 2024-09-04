@@ -2,6 +2,7 @@ import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } fr
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import { HttpClientModule } from "@angular/common/http";
 import { provideRouter } from "@angular/router";
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { routes } from "./app.routes";
 
 export const appConfig: ApplicationConfig = {
@@ -9,6 +10,7 @@ export const appConfig: ApplicationConfig = {
         provideZoneChangeDetection({ eventCoalescing: true }),
         importProvidersFrom(HttpClientModule),
         provideRouter(routes),
-        provideAnimationsAsync()
+        provideAnimationsAsync(),
+        { provide: LocationStrategy, useClass: HashLocationStrategy }
     ]
 };
