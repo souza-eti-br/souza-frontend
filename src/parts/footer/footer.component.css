@@ -1,0 +1,11 @@
+* {
+    font-size: 12px;
+    font-family: monospace;
+}
+a {
+    font-weight: 400;
+    text-decoration: none
+}
+a:hover {
+    font-weight: 900
+}

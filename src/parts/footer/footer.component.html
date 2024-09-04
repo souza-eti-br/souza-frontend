@@ -1,10 +1,10 @@
-<div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 5px; height: 40px;">
+<div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0px 5px; height: 40px;">
     <p-menubar [model]="items">
         <ng-template pTemplate="start">
-            {{i18n.get("server")}}: <i class="{{getIcon()}}" style="{{getColor()}}" pTooltip="{{getTooltip()}}" tooltipPosition="top"></i>
+            <span>{{i18n.get("server")}}:</span>&nbsp;<i class="{{getIcon()}}" style="{{getColor()}}" pTooltip="{{getTooltip()}}" tooltipPosition="top"></i>
         </ng-template>
         <ng-template pTemplate="end">
-            {{i18n.get("developed.by")}}: <a href="mailto:alan@souza.eti.br" target="_blank" style="color: var(--orange-400);">Alan Moraes Souza</a>
+            <span>{{i18n.get("developed.by")}}:</span>&nbsp;<a href="mailto:alan@souza.eti.br" target="_blank" style="color: var(--orange-400);">Alan Moraes Souza</a>
         </ng-template>
     </p-menubar>
 </div>
