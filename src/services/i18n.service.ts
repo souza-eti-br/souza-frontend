@@ -12,7 +12,6 @@ export class I18nService {
             "developed.by": "Desenvolvido por",
             "home": "Início",
             "inactive": "Inativo!",
-            "page.not.found": "Página não encontrada!",
             "server": "Servidor",
             "welcome": "Bem-vindo!",
             "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)"
@@ -22,7 +21,6 @@ export class I18nService {
             "developed.by": "Desarrollado por",
             "home": "Inicio",
             "inactive": "Inactivo!",
-            "page.not.found": "¡Página no encontrada!",
             "server": "Servidor",
             "welcome": "¡Bienvenidos!",
             "welcome-text": "Esta página es para uso personal. A continuación puedes acceder a mi LinkedIn. :)"
@@ -32,7 +30,6 @@ export class I18nService {
             "developed.by": "Developed by",
             "home": "Home",
             "inactive": "Inactive!",
-            "page.not.found": "Page not found!",
             "server": "Server",
             "welcome": "Welcome!",
             "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)"
