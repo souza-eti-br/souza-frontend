@@ -1,15 +1,15 @@
-div.header {
+div {
     background-color: #222222;
-    height: 45px;
+    height: 35px;
     left: 0px;
     overflow: hidden;
-    padding: 5px;
+    padding: 4px;
     position: absolute;
     right: 0px;
     top: 0px;
 }
 
-img.logo {
+img {
     float: left;
     height: 25px;
     margin-left: 4px;
@@ -18,16 +18,8 @@ img.logo {
     width: 25px;
 }
 
-a.link {
-    background-color: #222222;
-    color: #D58512;
+a {
     float: left;
-    margin-top: 2px;
-    font-weight: 400;
+    margin-top: 3px;
     padding: 5px 15px;
-    text-decoration: none;
-}
-
-a.link:hover {
-    font-weight: 900;
 }

@@ -25,12 +25,12 @@ export class FooterComponent {
     getColor(): string {
         if (this.status.isServerOnline()) {
             if (this.status.isDatabaseOnline()) {
-                return "color: #33FF33;";
+                return "color: #33CC33;";
             } else {
-                return "color: #FFFF33;";
+                return "color: #CCCC33;";
             }
         } else {
-            return "color: #FF3333;";
+            return "color: #CC3333;";
         }
     }
 }
