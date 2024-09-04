@@ -1,1 +1,5 @@
-<p-dropdown [options]="items" [(ngModel)]="selectedItem" optionLabel="name" optionValue="code" (onChange)="onChange()"></p-dropdown>
+<select [(ngModel)]="selectedItem" (change)="onChange()">
+    @for (item of items; track item.name) {
+        <option [value]="item.code">{{item.name}}</option>
+    }
+</select>

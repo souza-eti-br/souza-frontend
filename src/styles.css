@@ -1,6 +1,17 @@
-@import "primeicons/primeicons.css";
 @import "bootstrap-icons/font/bootstrap-icons.min.css";
 
-html {
+* {
+    font-family: monospace;
     font-size: 15px;
+    color: #FFFFFF;
+}
+
+a {
+    color: #D58512;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 900;
 }

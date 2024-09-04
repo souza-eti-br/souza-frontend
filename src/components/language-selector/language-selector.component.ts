@@ -1,13 +1,12 @@
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { DropdownModule } from "primeng/dropdown";
 import { Language } from "../../types/language";
 import { I18nService } from "../../services/i18n.service";
 
 @Component({
     selector: "ams-language-selector",
     standalone: true,
-    imports: [ DropdownModule, FormsModule ],
+    imports: [ FormsModule ],
     templateUrl: "./language-selector.component.html",
     styleUrl: "./language-selector.component.css"
 })

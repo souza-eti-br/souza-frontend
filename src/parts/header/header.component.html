@@ -1,10 +1,5 @@
-<div style="position: absolute; top: 0; left: 0; right: 0; padding: 5px; height: 50px;">
-    <p-menubar [model]="items">
-        <ng-template pTemplate="start">
-            &nbsp;&nbsp;<a href=""><img src="images/favicon.png" height="20" class="mr-2"></a>&nbsp;&nbsp;
-        </ng-template>
-        <ng-template pTemplate="end">
-            <ams-language-selector></ams-language-selector>
-        </ng-template>
-    </p-menubar>
+<div class="header">
+    <img class="logo" alt="Souza.eti.br" src="images/favicon.png"/>
+    <a class="link" href="home">{{i18n.get("home")}}</a>
+    <ams-language-selector></ams-language-selector>
 </div>

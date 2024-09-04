@@ -1,0 +1,11 @@
+div.main {
+    background-color: #000000;
+    bottom: 20px;
+    color: #E8E8E8;
+    left: 0px;
+    overflow: auto;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    top: 45px;
+}

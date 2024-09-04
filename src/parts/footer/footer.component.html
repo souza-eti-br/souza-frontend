@@ -1,10 +1,6 @@
-<div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0px 5px; height: 40px;">
-    <p-menubar [model]="items">
-        <ng-template pTemplate="start">
-            <span>{{i18n.get("server")}}:</span>&nbsp;<i class="{{getIcon()}}" style="{{getColor()}}" pTooltip="{{getTooltip()}}" tooltipPosition="top"></i>
-        </ng-template>
-        <ng-template pTemplate="end">
-            <span>{{i18n.get("developed.by")}}:</span>&nbsp;<a href="mailto:alan@souza.eti.br" target="_blank" style="color: var(--orange-400);">Alan Moraes Souza</a>
-        </ng-template>
-    </p-menubar>
+<div class="footer">
+    <div class="server-description">
+        <span class="server-status">{{i18n.get("server")}}:&nbsp;</span><i style="font-size: 12px;" class="{{getIcon()}}" style="{{getColor()}}"></i>
+    </div>
+    <span class="label">{{i18n.get("developed.by")}}:&nbsp;</span><a class="link" target="_blank" href="mailto:alan@souza.eti.br">Alan Moraes Souza</a>
 </div>
