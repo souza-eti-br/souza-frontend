@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
+import { RouterLink } from '@angular/router';
 import { I18nService } from "../../services/i18n.service";
 import { LanguageSelectorComponent } from "../../components/language-selector/language-selector.component";
 
 @Component({
     selector: "ams-header",
     standalone: true,
-    imports: [ LanguageSelectorComponent ],
+    imports: [ RouterLink, LanguageSelectorComponent ],
     templateUrl: "./header.component.html",
     styleUrl: "./header.component.css"
 })
