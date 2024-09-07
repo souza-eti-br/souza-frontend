@@ -2,12 +2,12 @@
 
 * {
     font-family: monospace;
-    font-size: 15px;
     color: #E8E8E8;
 }
 
 html {
     background-color: #000000;
+    font-size: 15px;
 }
 
 a {
@@ -27,4 +27,13 @@ select {
     float: right;
     margin: 2px;
     padding: 5px 4px;
+}
+
+.container {
+    padding: 25px;
+    text-align: center;
+}
+
+.color-orange {
+    color: #D58512;
 }

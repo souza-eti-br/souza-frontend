@@ -13,6 +13,8 @@ export class I18nService {
             "home": "Início",
             "inactive": "Inativo!",
             "server": "Servidor",
+            "server.is.offline": "Servidor está desligado!",
+            "try.again.later": "Tente de novo mais tarde.",
             "welcome": "Bem-vindo!",
             "welcome-text": "Está página é para uso pessoal. Abaixo você pode acessar meu LinkedIn. :)"
         }, es: {
@@ -22,6 +24,8 @@ export class I18nService {
             "home": "Inicio",
             "inactive": "Inactivo!",
             "server": "Servidor",
+            "server.is.offline": "El servidor está offline!",
+            "try.again.later": "Vuelve a intentarlo más tarde.",
             "welcome": "¡Bienvenidos!",
             "welcome-text": "Esta página es para uso personal. A continuación puedes acceder a mi LinkedIn. :)"
         }, en: {
@@ -31,6 +35,8 @@ export class I18nService {
             "home": "Home",
             "inactive": "Inactive!",
             "server": "Server",
+            "server.is.offline": "Server is offline!",
+            "try.again.later": "Try again later.",
             "welcome": "Welcome!",
             "welcome-text": "This page is for personal use. Below you can access my LinkedIn. :)"
         }
