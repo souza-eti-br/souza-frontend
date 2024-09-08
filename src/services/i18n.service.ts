@@ -58,6 +58,15 @@ export class I18nService {
     getLanguage(): string {
         return this.language;
     }
+    getLanguageText(): string {
+        if (this.language === "en") {
+            return "English";
+        } else if (this.language === "es") {
+            return "Español";
+        } else {
+            return "Português";
+        }
+    }
     setLanguage(language: string): boolean {
         let old = this.language;
         let changed = false;

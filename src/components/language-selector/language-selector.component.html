@@ -1,5 +1,10 @@
-<select [(ngModel)]="selectedItem" (change)="onChange()">
-    @for (item of items; track item.name) {
-        <option [value]="item.code">{{item.name}}</option>
-    }
-</select>
+<div class="btn-group float-end">
+    <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{i18n.getLanguageText()}}
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" (click)="i18n.setLanguage('en')">English</a></li>
+      <li><a class="dropdown-item" (click)="i18n.setLanguage('es')">Español</a></li>
+      <li><a class="dropdown-item" (click)="i18n.setLanguage('pt')">Português</a></li>
+    </ul>
+</div>
