@@ -45,13 +45,9 @@
                         "tsConfig": "tsconfig.json",
                         "assets": [ "src/images" ],
                         "styles": [
-                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
-                            "node_modules/bootstrap-icons/font/bootstrap-icons.min.css",
                             "src/styles.css"
                         ],
-                        "scripts": [
-                            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-                        ]
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
@@ -66,7 +62,7 @@
                                     "maximumError": "4kB"
                                 }
                             ],
-                            "outputHashing": "all"
+                            "outputHashing": "none"
                         },
                         "development": {
                             "optimization": false,
